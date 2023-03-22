@@ -9,23 +9,30 @@ import CartItem from '../cart-item/cart-item.component';
 import './cart-dropdown.style.scss';
 
 const CartDropdown=()=>{
-    const {cartItems}=useContext(CartContext);
+    const {cartItems,setIsCartOpen}=useContext(CartContext);
     const navigate=useNavigate();
 
     const goToCheckoutHandler=()=>{
         navigate('/checkout');
     }
 
+    const handleOutsideClick=()=>{
+        setIsCartOpen(false);
+    }
+
     return (
-        <div className='cart-dropdown-container'>
-            <div className='cart-items'>
-                {cartItems.length ? (
-                    cartItems.map(item=><CartItem key={item.id} cartItem={item} />)
-                ):(
-                    <span>Your cart is empty</span>)}
+        <>
+            <div className="modal-wrapper" onClick={handleOutsideClick}></div> 
+            <div className='cart-dropdown-container'>
+                <div className='cart-items'>
+                    {cartItems.length ? (
+                        cartItems.map(item=><CartItem key={item.id} cartItem={item} />)
+                    ):(
+                        <span>Your cart is empty</span>)}
+                </div>
+                <Button onClick={goToCheckoutHandler}>GO TO CHECKOUT</Button>
             </div>
-            <Button onClick={goToCheckoutHandler}>GO TO CHECKOUT</Button>
-        </div>
+        </>
     );   
 };
 
