@@ -17,7 +17,7 @@ const Category=()=>{
     },[category,categoriesMap]);
 
     return(
-        <Fragment>
+        <>
             <h2 className='category-title'>{category.toUpperCase()}</h2>
             <div className='category-container'>
                 {products &&
@@ -25,7 +25,7 @@ const Category=()=>{
                         <ProductCard key={product.id} product={product} />
                     ))}
             </div>
-        </Fragment>
+        </>
     )
 };
 
