@@ -14,6 +14,7 @@ const CartDropdown=()=>{
 
     const goToCheckoutHandler=()=>{
         navigate('/checkout');
+        setIsCartOpen(false);
     }
 
     const handleOutsideClick=()=>{
