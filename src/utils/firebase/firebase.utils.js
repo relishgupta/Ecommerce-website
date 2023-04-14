@@ -19,7 +19,7 @@ import {
   writeBatch,
   query,
   getDocs,
-} from 'firebase/firestore'
+} from 'firebase/firestore';
 
 const firebaseConfig = {
   apiKey: "AIzaSyCvNWIU5PSkWfDOAPJSa_d1syIOQ-XPWZA",
@@ -27,7 +27,7 @@ const firebaseConfig = {
   projectId: "ecommerce-db-e33e6",
   storageBucket: "ecommerce-db-e33e6.appspot.com",
   messagingSenderId: "871122191057",
-  appId: "1:871122191057:web:e4692affdb9c7adb693bf0"
+  appId: "1:871122191057:web:e4692affdb9c7adb693bf0",
 };
 
 initializeApp(firebaseConfig);
