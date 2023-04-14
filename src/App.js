@@ -7,6 +7,7 @@ import {
     onAuthStateChangedListener,
     createUserDocumentFromAuth
 } from './utils/firebase/firebase.utils';
+
 import Navigation from './routes/navigation/navigation.component';
 import Home from './routes/home/home.component';
 import Shop from './routes/shop/shop.component';
